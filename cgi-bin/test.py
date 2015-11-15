@@ -58,13 +58,13 @@ def stockvaluetest():
 
 	if(i>d):
 		global string
-		string = "Increment"
+		string = "You should expect a fair amount of appraisal in the coming weeks."
 	elif(d>i):
 		global string
-		string = "Decrement"
+		string = "This price historically indicates that there may be a sink in the share's performance in the next few weeks."
 	else:
 		global string
-		string = "The company's stock hasn't had this value in some time."
+		string = "The company's stock hasn't had this value in some time. Meaning it's all still a gamble."
 	return string
 print("Content-type: text/html\r\n\r\n")
 print("<html>")
@@ -72,7 +72,8 @@ print("<head>")
 print("<title> Test Value </title>")
 print("</head>")
 print("<body>")
-print(stockvaluetest())
+print("<h2>After matching the relevant values over the past year:</h2>")
+print("<h3> %s </h3>"%stockvaluetest())
 print("</body>")
 print("</html>")
 
